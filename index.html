@@ -3,419 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Success Library is the best study library and reading room in Durg, offering AC rooms, fast Wi-Fi, RO water, rooftop chill zone, and personal desks for students and professionals." />
-  <meta name="keywords" content="Success Library Durg, Best Library in Durg, Reading Room, Study Library, Quiet Library, AC Library, Study Space" />
-  <meta name="author" content="Tushar Budhiraja" />
   <title>Success Library | Best Study Library in Durg</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Animate.css for beautiful animations -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Animate.css for smooth effects -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 
-  <style>
-    :root {
-      --primary: #ffbe0b;
-      --secondary: #22223b;
-      --accent: #f72585;
-      --background: #f7f9fc;
-      --shadow: 0 4px 16px rgba(34, 34, 59, 0.1);
-      --border-radius: 18px;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--background);
-      color: var(--secondary);
-    }
-    header {
-      background: linear-gradient(rgba(40, 39, 61, 0.8), rgba(40,39,61,0.75)),
-        url('https://images.unsplash.com/photo-1581092334554-6c9510d1b6c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-      color: #fff;
-      text-align: center;
-      padding: 120px 20px 40px;
-      position: relative;
-      overflow: hidden;
-    }
-    .star-burst {
-      position: absolute;
-      right: 30px;
-      top: 30px;
-      z-index: 2;
-      width: 130px;
-      animation: bounceIn 1s;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.4em;
-      font-weight: 800;
-      letter-spacing: 2px;
-      animation: fadeInDown 1s;
-    }
-    .subtitle {
-      font-size: 1.2rem;
-      margin-bottom: 0.45em;
-      color: #ffe066;
-      font-weight: 600;
-      letter-spacing: 1px;
-      display: block;
-      animation: fadeInDown 1.1s;
-    }
-    header p {
-      font-size: 1.1rem;
-      margin-bottom: 1.7em;
-      opacity: 0.95;
-      animation: fadeInUp 1.2s;
-    }
-    .cta-button {
-      padding: 18px 44px;
-      font-size: 1.25rem;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      color: #fff;
-      font-weight: 700;
-      border: none;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      cursor: pointer;
-      transition: background 0.21s, transform 0.13s;
-      animation: pulse 1.25s;
-      margin-bottom: 1em;
-      position: relative;
-      z-index: 2;
-    }
-    .cta-button:hover {
-      background: linear-gradient(90deg, var(--accent), var(--primary));
-      transform: translateY(-2px) scale(1.03) rotate(-2deg);
-    }
-    .toast {
-      position: fixed;
-      top: 25px;
-      right: 18px;
-      background: var(--accent);
-      color: #fff;
-      padding: 16px 32px;
-      border-radius: var(--border-radius);
-      font-weight: 600;
-      font-size: 1.1rem;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s;
-      box-shadow: var(--shadow);
-      z-index: 999;
-    }
-    .toast.show { opacity: 1; pointer-events: auto; }
-
-    main {
-      max-width: 1050px;
-      margin: 0 auto;
-      padding: 40px 18px 24px;
-    }
-    .section {
-      background: #fff;
-      margin: 0 0 34px 0;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      padding: 34px 26px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      animation: fadeInUp 1.5s;
-    }
-    .section-image {
-      flex: 1 1 250px;
-      text-align: center;
-      margin-right: 28px;
-    }
-    .section-image img {
-      width: 150px;
-      max-width: 80%;
-      border-radius: 12px;
-      box-shadow: 0 2px 16px rgba(247,37,133, 0.14);
-      transition: transform 0.3s;
-    }
-    .section-image img:hover {
-      transform: scale(1.07) rotate(-6deg);
-    }
-    .section-content {
-      flex: 2 1 350px;
-    }
-    ul {
-      margin-top: 14px;
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-    ul li {
-      background: #f9f9fd;
-      box-shadow: 0 2px 8px rgba(34,34,59,.04);
-      border-radius: 12px;
-      padding: 12px 20px;
-      font-size: 1.05rem;
-      margin-bottom: 8px;
-      min-width: 240px;
-      display: flex;
-      align-items: center;
-    }
-    ul li span {
-      font-size: 1.4rem;
-      margin-right: 13px;
-    }
-    h2 {
-      color: var(--accent);
-      font-size: 1.8rem;
-      margin-bottom: 6px;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-    .owner-section {
-      background: #e7ffe4;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      padding: 24px;
-      margin-bottom: 32px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-    .owner-avatar {
-      border-radius: 50%;
-      width: 85px;
-      height: 85px;
-      object-fit: cover;
-      box-shadow: 0 2px 20px rgba(34, 34, 59, 0.08);
-      border: 3px solid var(--primary);
-      background: #fff;
-    }
-    .owner-details {
-      flex: 1;
-    }
-    .owner-title {
-      font-weight: 700;
-      color: var(--accent);
-      font-size: 1.2rem;
-      margin-bottom: 6px;
-    }
-    .owner-contact {
-      font-size: 1rem;
-      color: #2d524e;
-      margin-bottom: 4px;
-    }
-    .map {
-      background: #fff;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      padding: 20px;
-    }
-    .map iframe {
-      width: 100%;
-      height: 320px;
-      border: none;
-      border-radius: var(--border-radius);
-      box-shadow: 0 2px 6px rgba(34,34,59,.10);
-    }
-    /* Carousel styling */
-    .reviews-section {
-      background: #f5f8ff;
-      border-radius: var(--border-radius);
-      margin-bottom: 42px;
-      box-shadow: var(--shadow);
-      padding: 30px 18px;
-    }
-    .reviews-title {
-      text-align: center;
-      color: var(--accent);
-      font-size: 1.5rem;
-      letter-spacing: 1px;
-      margin-bottom: 24px;
-      font-weight: 700;
-    }
-    .carousel {
-      position: relative;
-      max-width: 680px;
-      margin: auto;
-      min-height: 205px;
-    }
-    .carousel-review {
-      display: none;
-      background: #fff;
-      border-radius: 13px;
-      box-shadow: 0 2px 12px rgba(34,34,59,0.09);
-      padding: 25px 28px 20px 32px;
-      text-align: left;
-      min-height: 150px;
-      color: #444;
-      animation: fadeIn 0.7s;
-      position: relative;
-    }
-    .carousel-review.active {
-      display: block;
-    }
-    .carousel-avatar {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      box-shadow: 0 1px 6px rgba(34,34,59,0.10);
-      object-fit: cover;
-      margin-right: 16px;
-      float: left;
-    }
-    .carousel-author {
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 2px;
-      font-size: 1.06rem;
-    }
-    .carousel-stars {
-      color: #ffd700;
-      margin-bottom: 9px;
-    }
-    .carousel-date {
-      font-size: 0.95rem;
-      color: #404040;
-      font-weight: 600;
-      margin-bottom: 6px;
-      margin-left: 5px;
-    }
-    .carousel-content {
-      font-size: 1.06rem;
-      margin-top: 7px;
-      margin-left: 70px;
-    }
-    .carousel-btn {
-      background: var(--primary);
-      border: none;
-      border-radius: 50%;
-      width: 38px;
-      height: 38px;
-      margin: 0 10px;
-      font-size: 1.5rem;
-      color: #444;
-      box-shadow: 0 2px 10px rgba(255,190,11,0.06);
-      cursor: pointer;
-      transition: background 0.17s;
-    }
-    .carousel-btn:hover {
-      background: var(--accent);
-      color: #fff;
-    }
-    .review-gmap-label {
-      text-align: center;
-      color: #099c3d;
-      margin-bottom: 8px;
-      font-size: 1rem;
-      font-weight: 500;
-    }
-
-    footer {
-      background-color: var(--secondary);
-      color: #fff;
-      text-align: center;
-      padding: 24px 0 12px;
-      font-size: 1.05rem;
-      border-top-left-radius: var(--border-radius);
-      border-top-right-radius: var(--border-radius);
-      margin-top: 50px;
-    }
-
-    @media (max-width: 768px) {
-      header { padding: 60px 10px 34px; }
-      .star-burst { right: 5px; top: 10px; width: 95px;}
-      .section { flex-direction: column; padding: 24px 8px;}
-      .section-image { margin-right: 0; margin-bottom: 20px;}
-      .owner-section { flex-direction: column; gap: 10px; }
-      .carousel-content { margin-left: 0; }
-      .carousel-review { padding: 20px 10px 17px 10px;}
-      .carousel-avatar { margin-left: 0;}
-    }
-    @keyframes bounceIn {
-      0% { transform: scale(0.2); opacity: 0; }
-      70% { transform: scale(1.05); opacity: 1;}
-      100% { transform: scale(1); opacity: 1;}
-    }
-    @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(247,37,133, 0.4);}
-      50% { box-shadow: 0 0 24px 7px rgba(247,37,133, 0.23);}
-    }
-    @keyframes fadeIn { 0% { opacity:0; } 100% { opacity: 1; } }
-  </style>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <img class="star-burst animate__animated animate__tada"
-      src="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/84596252/d2917d95-80f0-468d-bfb4-857629380af8/image.jpg"
-      alt="Limited Seats Book Now" />
+    <img src="book_now.png" alt="Book Now" class="star-burst animate__animated animate__tada" />
     <h1 class="animate__animated animate__fadeInDown">Success Library</h1>
     <span class="subtitle">Best Library near Malviya Nagar, Durg</span>
     <p class="animate__animated animate__fadeInUp">Cum Reading Room | Quiet, AC, Wi-Fi Enabled Study Space in Durg</p>
-    <button class="cta-button animate__animated animate__pulse" id="copy-btn">
-      📞 Book Your Seat Now
-    </button>
+    <button class="cta-button animate__animated animate__pulse" id="copy-btn">📞 Book Your Seat Now</button>
     <div class="toast" id="toast">Copied to clipboard!</div>
   </header>
 
   <main>
-    <!-- Reviews Carousel -->
-    <section class="reviews-section animate__animated animate__fadeInUp">
+    <section class="reviews-section">
       <div class="reviews-title">What Our Readers Say <span class="review-gmap-label">(Google Reviews)</span></div>
       <div class="carousel" id="carousel">
-        <div class="carousel-review active">
-          <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="Rahul Budhiraja" class="carousel-avatar">
-          <div class="carousel-author">Rahul Budhiraja</div>
-          <div class="carousel-stars">★★★★★ <span class="carousel-date">5 months ago</span></div>
-          <div class="carousel-content">
-            I recently visited success library, and it exceeded my expectations. The environment is quiet, well-lit, and thoughtfully designed for studying and working without distractions. The Wi-Fi is fast and reliable, and the seating is comfortable. Highly recommended for students, remote workers!
-          </div>
-        </div>
-        <div class="carousel-review">
-          <img src="https://randomuser.me/api/portraits/men/40.jpg" alt="Kunal Chandrakar" class="carousel-avatar">
-          <div class="carousel-author">Kunal Chandrakar</div>
-          <div class="carousel-stars">★★★★★ <span class="carousel-date">5 months ago</span></div>
-          <div class="carousel-content">
-            Good seating capacity... hygiene is maintained and seats are comfortable. Timing and facilities of library are good.
-          </div>
-        </div>
-        <div class="carousel-review">
-          <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Naina Manikpuri" class="carousel-avatar">
-          <div class="carousel-author">Naina Manikpuri</div>
-          <div class="carousel-stars">★★★★★ <span class="carousel-date">5 months ago</span></div>
-          <div class="carousel-content">
-            I personally joined this library and each and every service is great, peaceful environment and good management.
-          </div>
-        </div>
-        <div class="carousel-review">
-          <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Kundan Kundan Thakur" class="carousel-avatar">
-          <div class="carousel-author">Kundan Kundan Thakur</div>
-          <div class="carousel-stars">★★★★★ <span class="carousel-date">5 months ago</span></div>
-          <div class="carousel-content">
-            I really enjoyed studying at this place. Loved the environment and all the facilities are really good. Specially the nature of owner is good.
-          </div>
-        </div>
-        <div class="carousel-review">
-          <img src="https://randomuser.me/api/portraits/men/58.jpg" alt="Prabhdev Singh Kussar" class="carousel-avatar">
-          <div class="carousel-author">Prabhdev Singh Kussar</div>
-          <div class="carousel-stars">★★★★★ <span class="carousel-date">5 months ago</span></div>
-          <div class="carousel-content">
-            I cleared my bank po just because of my consistency at success library. Best thing is great guidance by Tushar bhaiya!
-          </div>
-        </div>
-        <div class="carousel-review">
-          <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Juhi Sharma" class="carousel-avatar">
-          <div class="carousel-author">Juhi Sharma</div>
-          <div class="carousel-stars">★★★★★ <span class="carousel-date">5 months ago</span></div>
-          <div class="carousel-content">
-            Very peaceful and owner's way of talking is so good....
-          </div>
-        </div>
-        <div class="carousel-review">
-          <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Yogeshwar Kumar Sharma" class="carousel-avatar">
-          <div class="carousel-author">Yogeshwar Kumar Sharma</div>
-          <div class="carousel-stars">★★★★★ <span class="carousel-date">5 months ago</span></div>
-          <div class="carousel-content">
-            Rooftop facility is so wonderful for discussion.
-          </div>
-        </div>
+        <!-- Example Reviews -->
+       <div class="carousel-review active">
+  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Budhiraja" class="carousel-avatar">
+  <div class="carousel-author">Rahul Budhiraja</div>
+  <div class="carousel-stars">★★★★★ <span class="carousel-date">5 months ago</span></div>
+  <div class="carousel-content">
+    I recently visited Success Library, and it exceeded my expectations. The environment is quiet, well-lit, and thoughtfully designed for studying and working without distractions.
+  </div>
+</div>
+
+<div class="carousel-review">
+  <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Neel Verma" class="carousel-avatar">
+  <div class="carousel-author">Neel Verma</div>
+  <div class="carousel-stars">★★★★★ <span class="carousel-date">5 months ago</span></div>
+  <div class="carousel-content">
+    Best library in Durg, even lunch and discussion area are too good compared to others.
+  </div>
+</div>
+
+<div class="carousel-review">
+  <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Kunal Chandrakar" class="carousel-avatar">
+  <div class="carousel-author">Kunal Chandrakar</div>
+  <div class="carousel-stars">★★★★★ <span class="carousel-date">5 months ago</span></div>
+  <div class="carousel-content">
+    Good seating capacity, hygiene is maintained, and seats are comfortable. Timing and facilities of the library are good.
+  </div>
+</div>
+
+<div class="carousel-review">
+  <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Naina Manikpuri" class="carousel-avatar">
+  <div class="carousel-author">Naina Manikpuri</div>
+  <div class="carousel-stars">★★★★★ <span class="carousel-date">5 months ago</span></div>
+  <div class="carousel-content">
+    I personally joined this library and each and every service is great. Peaceful environment and good management.
+  </div>
+</div>
+
+<div class="carousel-review">
+  <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Kundan Kundan Thakur" class="carousel-avatar">
+  <div class="carousel-author">Kundan Kundan Thakur</div>
+  <div class="carousel-stars">★★★★★ <span class="carousel-date">5 months ago</span></div>
+  <div class="carousel-content">
+    I really enjoyed studying at this place. Loved the environment and all the facilities. Especially the nature of the owner is good.
+  </div>
+</div>
+
+<div class="carousel-review">
+  <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Prabhdev Singh Kussar" class="carousel-avatar">
+  <div class="carousel-author">Prabhdev Singh Kussar</div>
+  <div class="carousel-stars">★★★★★ <span class="carousel-date">5 months ago</span></div>
+  <div class="carousel-content">
+    I cleared my Bank PO just because of my consistency at Success Library. Best thing is great guidance by Tushar bhaiya 😄.
+  </div>
+</div>
+
+<div class="carousel-review">
+  <img src="https://randomuser.me/api/portraits/men/58.jpg" alt="Akash Thakur" class="carousel-avatar">
+  <div class="carousel-author">Akash Thakur</div>
+  <div class="carousel-stars">★★★★★ <span class="carousel-date">5 months ago</span></div>
+  <div class="carousel-content">
+    Best library in Durg. Main thing I liked was the open lunch and discussion area.
+  </div>
+</div>
+
+<div class="carousel-review">
+  <img src="https://randomuser.me/api/portraits/women/48.jpg" alt="Juhi Sharma" class="carousel-avatar">
+  <div class="carousel-author">Juhi Sharma</div>
+  <div class="carousel-stars">★★★★★ <span class="carousel-date">5 months ago</span></div>
+  <div class="carousel-content">
+    Very peaceful and owner's way of talking is so good...
+  </div>
+</div>
+
+<div class="carousel-review">
+  <img src="https://randomuser.me/api/portraits/men/24.jpg" alt="Rahul Athwani" class="carousel-avatar">
+  <div class="carousel-author">Rahul Athwani</div>
+  <div class="carousel-stars">★★★★★ <span class="carousel-date">Just now</span></div>
+  <div class="carousel-content">
+    One of the best libraries in town! Peaceful and lovely ambience with great support by the owner!
+  </div>
+</div>
+
+<div class="carousel-review">
+  <img src="https://randomuser.me/api/portraits/men/25.jpg" alt="Saurabh Kumar Jaiswal" class="carousel-avatar">
+  <div class="carousel-author">Saurabh Kumar Jaiswal</div>
+  <div class="carousel-stars">★★★★★ <span class="carousel-date">Just now</span></div>
+  <div class="carousel-content">
+    Hare Krishna 🦚🙏🏻 Very neat and clean, and the owner is very friendly.
+  </div>
+</div>
+
+
+        <!-- Add more .carousel-review blocks for additional reviews -->
         <div style="text-align:center; margin-top:3px;">
           <button class="carousel-btn" onclick="prevReview()" title="Previous Review">&#8592;</button>
           <button class="carousel-btn" onclick="nextReview()" title="Next Review">&#8594;</button>
@@ -423,71 +127,69 @@
       </div>
     </section>
 
-    <section class="section animate__animated animate__fadeInUp">
+    <section class="section about">
       <div class="section-image">
+        <!-- Stock image for decor -->
         <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=500&q=80" alt="Reading Room" loading="lazy">
       </div>
       <div class="section-content">
         <h2>About Success Library</h2>
-        <p>Success Library is Durg’s premium reading room and study hub, offering a peaceful and distraction-free environment ideal for students, professionals, and exam aspirants. Located in Deepak Nagar (near Malviya Nagar), it’s equipped with all modern facilities needed for focused learning and productivity.</p>
-      </div>
-    </section>
-
-    <section class="section animate__animated animate__fadeInUp">
-      <div class="section-image">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="Study Facilities" loading="lazy">
-      </div>
-      <div class="section-content">
-        <h2>Facilities We Offer</h2>
         <ul>
-          <li><span>❄️</span>Fully Air-Conditioned Study Rooms</li>
-          <li><span>🪑</span>Personal Desks (Secured and Open Seating)</li>
-          <li><span>⚡</span>High-Speed Wi-Fi Access</li>
-          <li><span>💧</span>RO Drinking Water</li>
-          <li><span>🖲</span>24X7 CCTV Surveillance</li>
-          <li><span>🌿</span>Chill Rooftop Zone</li>
-          <li><span>🔇</span>Silent, Quiet & Well-Lit Environment</li>
-          <li><span>📍</span>Prime Location in Deepak Nagar</li>
+          <li>❄️ Fully Air-Conditioned Study Rooms</li>
+          <li>🪑 Personal Desks (Secured & Open Seating)</li>
+          <li>⚡ High-Speed Wi-Fi Access</li>
+          <li>💧 RO Drinking Water</li>
+          <li>📰 Daily Newspaper</li>
+          <li>🖲 24x7 CCTV Surveillance</li>
+          <li>🌿 Rooftop Chill Zone</li>
+          <li>🔇 Silent, Quiet & Well-Lit Environment</li>
         </ul>
       </div>
     </section>
 
-    <section class="section contact animate__animated animate__fadeInUp">
-      <div class="section-content">
-        <h2>Contact Us</h2>
-        <p><strong>Phone:</strong> <span id="phone-number">8103515519</span></p>
-        <p><strong>Location:</strong> In Front Of Maharashtra Mandal, Deepak Nagar, Durg, Chhattisgarh</p>
-      </div>
-      <div class="section-image">
-        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=500&q=80" alt="Contact Desk" loading="lazy">
-      </div>
+    <section class="section gallery-section">
+  <h2>Our Library Gallery</h2>
+  <div class="gallery-grid">
+    <img src="library_photo1.jpg" alt="Library Photo 1">
+    <img src="library_photo2.jpg" alt="Library Photo 2">
+    <img src="library_photo3.jpg" alt="Library Photo 3">
+    <img src="library_photo4.jpg" alt="Library Photo 4">
+    <!-- Add more <img> tags as needed -->
+  </div>
+</section>
+
+    <section class="contact section">
+      <h2>Contact & Visit</h2>
+      <p><b>Phone:</b> <span id="phone-number">8103515519</span></p>
+      <p><b>Location:</b> In Front Of Maharashtra Mandal, Deepak Nagar, Durg, Chhattisgarh</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.903082055674!2d81.2908353!3d21.196008699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a293d278367f9bd%3A0x642d14c04526a451!2sSuccess%20library!5e0!3m2!1sen!2sin!4v1753288372282!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
-    <section class="owner-section animate__animated animate__fadeInUp">
-      <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Tushar Budhiraja" class="owner-avatar"/>
-      <div class="owner-details">
-        <div class="owner-title">Owner & Proprietor</div>
-        <div class="owner-contact"><b>Tushar Budhiraja</b></div>
-        <div class="owner-contact">Phone: <a href="tel:8103515519">8103515519</a></div>
-      </div>
-    </section>
+    <!-- <section class="section contact-form-section"> -->
+  <h2>Contact Us</h2>
+  <p>Have a question or want to book your seat? Send us a message!</p>
+  <form action="https://formspree.io/f/mdorywyy" method="POST" class="contact-form">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required />
 
-    <section class="section map animate__animated animate__fadeInUp">
-      <div class="section-content">
-        <h2>Find Us on Google Maps</h2>
-        <p>We’re easy to reach and conveniently located. Tap below to navigate!</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.0537563452717!2d81.29097687467404!3d21.205655880472373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a29227ac1a1f221%3A0x7a38b27ae2312f20!2sSuccess%20Library!5e0!3m2!1sen!2sin!4v1721761174621!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section>
+    <label for="query">Your Query</label>
+    <textarea id="query" name="message" rows="5" required></textarea>
+
+    <button class="cta-button" type="submit">📨 Send Message</button>
+  </form>
+</section>
+
   </main>
 
-  <footer>
-    &copy; 2025 Success Library, Durg. All rights reserved.
-  </footer>
+<footer>
+  &copy; 2025 Success Library, Durg. All rights reserved.<br>
+  📍 <a href="https://maps.app.goo.gl/RgWckVZynyHbRFKr7" target="_blank" rel="noopener" style="color: #ffdb70; font-weight: 500; text-decoration: none;">
+    View Our Exact Location on Google Maps
+  </a>
+</footer>
 
-  <!-- Button, Toast, and Carousel Scripts -->
+
   <script>
-    // Copy phone number to clipboard on button click
     document.getElementById("copy-btn").addEventListener("click", function() {
       const number = "8103515519";
       navigator.clipboard.writeText(number).then(function() {
@@ -497,11 +199,9 @@
         }, 1700);
       });
     });
-
-    // Simple Reviews Carousel
+    // Simple Carousel
     const reviews = document.querySelectorAll('.carousel-review');
     let currentIndex = 0;
-
     function showReview(idx) {
       reviews.forEach((el, i) => el.classList.toggle('active', i === idx));
     }
@@ -513,8 +213,6 @@
       currentIndex = (currentIndex + 1) % reviews.length;
       showReview(currentIndex);
     }
-    // Optionally: auto-advance every few seconds
-    // setInterval(() => { nextReview(); }, 8000);
   </script>
 </body>
 </html>
