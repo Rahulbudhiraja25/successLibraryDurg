@@ -22,6 +22,10 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div id="loading-spinner">
+    <div class="spinner"></div>
+  </div>
+  
   <header>
     <!-- <img src="Success.png" alt="Site Logo" class="logo"> -->
     <img src="book_now.png" alt="Book Now" class="star-burst animate__animated animate__tada" />
@@ -253,5 +257,13 @@
    title="Follow us on Instagram">
   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
 </a>
+
+<script>
+  window.addEventListener("load", function () {
+    const spinner = document.getElementById("loading-spinner");
+    spinner.style.display = "none";
+  });
+</script>
+
 </body>
 </html>
