@@ -400,9 +400,11 @@
     const toast = document.getElementById('toast');
     callBtn.addEventListener('click', async () => {
       try {
+
         await navigator.clipboard.writeText('8103515519');
         toast.classList.remove('hide');
         setTimeout(() => toast.classList.add('hide'), 1600);
+        window.location.href = "tel:+918103515519";
       } catch (e) {
         window.location.href = 'tel:+918103515519';
       }
